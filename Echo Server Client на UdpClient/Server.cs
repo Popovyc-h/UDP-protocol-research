@@ -7,7 +7,7 @@ internal class Program
 {
     static async Task Main(string[] args)
     {
-        var server = new UdpClient(5005);
+        using var server = new UdpClient(5005);
 
         while (true)
         {
