@@ -8,7 +8,7 @@ internal class Program
 {
     static async Task Main(string[] args)
     {
-        var client = new UdpClient();
+        using var client = new UdpClient();
         var serverEndpoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 5005);
         var buffer = new byte[1024];
 
